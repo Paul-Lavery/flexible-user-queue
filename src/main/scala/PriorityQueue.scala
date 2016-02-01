@@ -89,12 +89,6 @@ class PriorityQueue[A](implicit val ord: Ordering[A])
   /** Returns a textual representation of a queue as a string. */
   override def toString(): String = heap.toList.mkString("PriorityQueue(", ", ", ")")
 
-  /** This method clones the priority queue.
-   *
-   *  @return  a priority queue with the same elements.
-   */
-  override def clone(): PriorityQueue[A] = new PriorityQueue[A] ++= this.iterator
-
   /** Checks if the heaps of the two priority queues are equal */
   override def equals(that: Any): Boolean = that.isInstanceOf[PriorityQueue[A]] &&
     this.iterator.toList == that.asInstanceOf[PriorityQueue[A]].iterator.toList
@@ -104,7 +98,6 @@ class PriorityQueue[A](implicit val ord: Ordering[A])
    *
    *  @return never.
    */
-
   override def hashCode(): Int =
     throw new UnsupportedOperationException("unsuitable as hash key")
 
@@ -153,14 +146,10 @@ class PriorityQueue[A](implicit val ord: Ordering[A])
       throw new NoSuchElementException
   }
 
-  /** Returns an array containing all the elements of the queue
+  /** Returns a List containing all the elements of the queue
    *  sorted by ascending priority
    */
-  def getAllByPriority(): Array[A] = {
-    val arr = this.clone().asInstanceOf[Array[A]]
-    Sorting.quickSort(arr)(ord)
-    arr
-  }
+  def getAllByPriority(): List[A] = this.iterator.toList.sorted(ord)
 
 }
 
