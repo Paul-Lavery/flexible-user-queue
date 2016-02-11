@@ -1,5 +1,7 @@
 # flexible-user-queue
 
+[![Build Status](https://travis-ci.org/paulporu/flexible-user-queue.svg?branch=master)](https://travis-ci.org/paulporu/flexible-user-queue)
+
 This Scala class implements a flexible priority queue using a min-heap. The code is based on the Scala collection [PriorityQueue.scala](https://github.com/scala/scala/blob/2.12.x/src/library/scala/collection/mutable/PriorityQueue.scala), but the advantage here is that all the operations are implemented so the min-heap paradigm stays true at all times. 
 
 One of the main applications for this is to manage physical user queues. As such a few extra utility functions that you would not find in a regular priority queue implementation were thrown in for good measure (remove, getAllByPriority, etc).
