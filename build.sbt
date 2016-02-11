@@ -1,7 +1,11 @@
+organization := "com.github.paulporu"
+
 name := "flexible-user-queue"
 
-version := "1.0"
+version := "1.2"
 
 scalaVersion := "2.11.7"
 
-libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.6" % "test"
+libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
+
+crossScalaVersions := Seq("2.10.6", "2.11.7")

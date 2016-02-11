@@ -3,6 +3,8 @@
 //
 // See the LICENCE.txt file distributed with this work for additional information regarding copyright ownership.
 
+package com.github.paulporu
+
 import scala.collection.mutable.ArrayBuffer
 import scala.collection.GenTraversableOnce
 import scala.collection.generic.GenericOrderedCompanion

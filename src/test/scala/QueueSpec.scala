@@ -1,4 +1,5 @@
 import org.scalatest._
+import com.github.paulporu.PriorityQueue
 
 class QueueSpec extends FlatSpec {
 
