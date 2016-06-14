@@ -1,8 +1,8 @@
-# flexible-user-queue
+# Scala Priority Queue
 
 [![Build Status](https://travis-ci.org/paulporu/flexible-user-queue.svg?branch=master)](https://travis-ci.org/paulporu/flexible-user-queue)
 
-This Scala class implements a flexible priority queue using a min-heap. The code is based on the Scala collection [PriorityQueue.scala](https://github.com/scala/scala/blob/2.12.x/src/library/scala/collection/mutable/PriorityQueue.scala), but the advantage here is that all the operations are implemented so the min-heap paradigm stays true at all times. 
+This Scala class implements a flexible priority queue using a min-heap. The code is based on the Scala collection [PriorityQueue.scala](https://github.com/scala/scala/blob/2.12.x/src/library/scala/collection/mutable/PriorityQueue.scala), but the advantage here is that all the operations are implemented so the min-heap paradigm stays true at all times. This means whatever operation you do on this priority queue the output will always keep / yield the elements of the queue ordered by priority, which is not the case in the default Scala implementation.
 
 One of the main applications for this is to manage physical user queues. As such a few extra utility functions that you would not find in a regular priority queue implementation were thrown in for good measure (remove, getAllByPriority, etc).
 
@@ -12,7 +12,7 @@ The library has been released to Maven Central so you can use it by simply listi
 ```scala
 "com.github.paulporu" %% "flexible-user-queue" % "1.2"
 ```
-You can also have a look at this simple Play application for an example of how to use this priority queue in your own project.  
+You can also have a look at [this Play application](https://github.com/paulporu/Play-User-Queue) for an example of how to use this priority queue in your own project.  
 
 ## Usage
 
